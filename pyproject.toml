@@ -1,0 +1,24 @@
+[project]
+name = "taiko-dan-probability"
+authors = [
+  { email = "123431755+UltraSoundUS@users.noreply.github.com" },
+  { name = "UltraSoundUS"}
+]
+requires-python = ">=3.9"
+
+[tool.ruff]
+# Group violations by containing file.
+output-format = "grouped"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN101",  # [[deprecated]]
+    "ANN102",  # [[deprecated]]
+    "COM812",  # [[conflicted]]
+    "ISC001",  # [[conflicted]]
+    "D415",    # Period
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

@@ -48,10 +48,10 @@ $$\begin{aligned}
 推論結果 $x_*$ の確率分布は以下のように表される。
 
 $$\begin{aligned}
-p(x_* | \mathcal{D}) &= t\left(x_* | \hat{\mu}, \frac{\hat{\beta} \hat{a}}{(1 + \hat{\beta}) \hat{b}}, 2 \hat{a}\right)\\
+p(x_* | \mathcal{D}) &= t\left(x_* | \hat{\mu}, \frac{(1 + \hat{\beta}) \hat{b}}{\hat{\beta} \hat{a}}, 2 \hat{a}\right)\\
 \end{aligned}$$
 
-このとき、$t$ は Student の t 分布である。
+このとき、$t$ は Student の t 分布 (英語版 Wikipedia の location-scale transformation に相当) である。
 
 この分布の平均と分散はそれぞれ以下のように表される。
 

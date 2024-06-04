@@ -94,7 +94,7 @@ const set_event = () => {
       const data = get_data_from_textdata(data_id);
       const max_combos = Number(document.getElementById(max_combos_id).value);
       const [mean, var_] = calc_posterior_stats(data, max_combos);
-      update_text(mean_id, mean.toFixed(2));
+      update_text(mean_id, mean.toFixed(1));
       // 0 以上 かつ 最大コンボ数以下の値にする。
       const [lower, upper] = calc_confidence_interval(mean, var_).map(x => Math.max(0, Math.min(max_combos, x)));
       update_text(lower_id, Math.floor(lower));

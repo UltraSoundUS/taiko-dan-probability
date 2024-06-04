@@ -134,8 +134,8 @@ const update_total_output = () => {
   const [mean_bad, var_bad] = calc_sum_mean_var(...results_bad);
 
   // 確率を計算する。
-  const prob_good = 100 * calc_prob_less_than(mean_good, var_good, document.getElementById("req-good").value);
-  const prob_bad = 100 * calc_prob_less_than(mean_bad, var_bad, document.getElementById("req-bad").value);
+  const prob_good = 100 * calc_prob_less_than(mean_good, var_good, document.getElementById("req-good").value - 1);
+  const prob_bad = 100 * calc_prob_less_than(mean_bad, var_bad, document.getElementById("req-bad").value - 1);
   update_text("total-good-prob", prob_good.toFixed(2));
   update_text("total-bad-prob", prob_bad.toFixed(2));
 };

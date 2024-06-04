@@ -107,6 +107,10 @@ const set_event = () => {
     // ページ読み込み時にも実行する。
     update_output();
   });
+
+  // `req-good` と `req-bad` が更新されたときに最終結果を更新するようにする。
+  document.getElementById("req-good").addEventListener("input", update_total_output);
+  document.getElementById("req-bad").addEventListener("input", update_total_output);
 };
 
 /**
